@@ -17,6 +17,10 @@
                 src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
                 alt="Shopify Logo"
               />
+              <img
+                src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
+                alt="shopify"
+              />
             </a>
             <div class="input">
               <img
@@ -68,19 +72,29 @@
           aria-describedby="modalDescription2"
         >
           <div class="modal-content2">
-            <h2 id="modalTitle2">Second Modal with Buttons</h2>
-            <p id="modalDescription2">Choose an option:</p>
             <div class="button-container2">
-              <button class="button2">Button A</button>
+              <div class="modal-container2__header">
+                <div>
+                  <button class="admin" id="admin">
+                    <p>DC</p>
+                  </button>
+                  <h4>Davii collections</h4>
+                  <input type="checkbox" />
+                </div>
+              </div>
               <button class="button2">Button B</button>
-              <button class="button2">Button C</button>
-              <button class="button2">Button D</button>
-              <button class="button2">Button E</button>
-              <button class="button2">Button F</button>
-              <button class="button2">Button G</button>
-              <button class="button2">Button H</button>
-              <button class="button2">Button I</button>
-              <button class="button2">Button J</button>
+              <div>
+                <button class="button2">Help Centre</button>
+                <button class="button2">ChangeLog</button>
+                <button class="button2">Community forums</button>
+                <button class="button2">Hire a shopify partner</button>
+                <button class="button2">Keyboard shortcuts</button>
+              </div>
+              <div>
+                <button class="button2">David Michael</button>
+                <button class="button2">Manage account</button>
+                <button class="button2">Log out</button>
+              </div>
             </div>
           </div>
         </div>
@@ -107,11 +121,21 @@
           <section class="special">
             <div class="special__container">
               <div class="more__info__top top">
-                <h3>setup guide</h3>
-                <p>
-                  Use this personalized guide to get your store up and running.
-                </p>
+                <div>
+                  <h3>setup guide</h3>
+                  <p>
+                    Use this personalized guide to get your store up and
+                    running.
+                  </p>
+                </div>
+
+                <div class="ranges">
+
+                  <p id = "progressText">0/5 completed</p>
+                  <input type="range" max="6" step="1" value="0" />
+                </div>
               </div>
+
               <div>
                 <button aria-label="Expand options">
                   <img
@@ -126,116 +150,30 @@
               <li>
                 <div class="container">
                   <div class="wrapper">
-                    <div>
-                      <svg
-                        class="mysvg"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        viewBox="0 0 32 32"
-                        fill="none"
-                      >
-                        <circle
-                          cx="16"
-                          cy="16"
-                          r="12"
-                          stroke="#8A8A8A"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-dasharray="4 6"
+                    <div class="toggle__hidden">
+                      <button class="dashed">
+                        <img
+                          src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                          alt=""
                         />
-                      </svg>
-                    </div>
-                    <div class="one">
-                      <h4 class="two">Customise your online store</h4>
-                      <div class="hidden__text">
-                        <p>
-                          Choose a theme and add your logo, colors, and images
-                          to reflect your brand. <span>Learn More.</span>
-                        </p>
-                        <button>Customise theme</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="container">
-                  <div class="wrapper">
-                    <div>
-                      <svg
-                        class="mysvg"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        viewBox="0 0 32 32"
-                        fill="none"
-                      >
-                        <circle
-                          cx="16"
-                          cy="16"
-                          r="12"
-                          stroke="#8A8A8A"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-dasharray="4 6"
-                        />
-                      </svg>
-                    </div>
-                    <div class="one">
-                      <h4 class="two">Add your first product</h4>
-                      <div class="hidden__text">
-                        <p>
-                          Write a description, add photos, and set pricing for
-                          the products you plan to sell.
-                          <span>Learn More.</span>
-                        </p>
-                        <div class="button__containers">
-                          <button>Add product</button>
-                          <button>import product</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="container">
-                  <div class="wrapper">
-                    <div>
-                      <svg
-                        class="mysvg"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        viewBox="0 0 32 32"
-                        fill="none"
-                      >
-                        <circle
-                          class="mysvg"
-                          cx="16"
-                          cy="16"
-                          r="12"
-                          stroke="#8A8A8A"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-dasharray="4 6"
-                        />
-                      </svg>
-                    </div>
-                    <div class="one">
+                      </button>
                       <h4 class="two">Add custom domain</h4>
-                      <div class="hidden__text">
+                    </div>
+
+                    <div class="hidden__text">
+                      <div>
                         <p>
                           Your current domain is 222219.myshopify.com but you
                           can add a custom daomain to help customers find you
                           online store. <span>Learn More.</span>
                         </p>
-                        <button>Add domain</button>
+                        <button class="hidden__button">Add domain</button>
                       </div>
+                      <img
+                        src="https://crushingit.tech/hackathon-assets/name-store.png"
+                        alt=""
+                        class="illustration"
+                      />
                     </div>
                   </div>
                 </div>
@@ -243,37 +181,30 @@
               <li>
                 <div class="container">
                   <div class="wrapper">
-                    <div>
-                      <svg
-                        class="mysvg"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        viewBox="0 0 32 32"
-                        fill="none"
-                      >
-                        <circle
-                          cx="16"
-                          cy="16"
-                          r="12"
-                          stroke="#8A8A8A"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-dasharray="4 6"
+                    <div class="toggle__hidden">
+                      <button class="dashed">
+                        <img
+                          src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                          alt=""
                         />
-                      </svg>
+                      </button>
+                      <h4 class="two">Add custom domain</h4>
                     </div>
-                    <div class="one">
-                      <h4 class="two">Name your store</h4>
-                      <div class="hidden__text">
+
+                    <div class="hidden__text">
+                      <div>
                         <p>
-                          Your temporary store name is currently Davii
-                          collections. The store name appears in your admin and
-                          your online store<span>Learn More.</span>
+                          Your current domain is 222219.myshopify.com but you
+                          can add a custom daomain to help customers find you
+                          online store. <span>Learn More.</span>
                         </p>
-                        <button>Name store</button>
+                        <button class="hidden__button">Add domain</button>
                       </div>
+                      <img
+                        src="https://crushingit.tech/hackathon-assets/name-store.png"
+                        alt=""
+                        class="illustration"
+                      />
                     </div>
                   </div>
                 </div>
@@ -281,38 +212,93 @@
               <li>
                 <div class="container">
                   <div class="wrapper">
-                    <div>
-                      <svg
-                        class="mysvg"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        viewBox="0 0 32 32"
-                        fill="none"
-                      >
-                        <circle
-                          cx="16"
-                          cy="16"
-                          r="12"
-                          stroke="#8A8A8A"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-dasharray="4 6"
+                    <div class="toggle__hidden">
+                      <button class="dashed">
+                        <img
+                          src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                          alt=""
                         />
-                      </svg>
+                      </button>
+                      <h4 class="two">Add custom domain</h4>
                     </div>
-                    <div class="one">
-                      <h4 class="two">Set up a payment provider</h4>
-                      <div class="hidden__text">
+
+                    <div class="hidden__text">
+                      <div>
                         <p>
-                          Choose a payment provider to start accepting payments.
-                          You'll need to create an account with the payment
-                          provider and set it up with your shopify store.
-                          <span>Learn More.</span>
+                          Your current domain is 222219.myshopify.com but you
+                          can add a custom daomain to help customers find you
+                          online store. <span>Learn More.</span>
                         </p>
-                        <button>Set up payment</button>
+                        <button class="hidden__button">Add domain</button>
                       </div>
+                      <img
+                        src="https://crushingit.tech/hackathon-assets/name-store.png"
+                        alt=""
+                        class="illustration"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container">
+                  <div class="wrapper">
+                    <div class="toggle__hidden">
+                      <button class="dashed">
+                        <img
+                          src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                          alt=""
+                        />
+                      </button>
+                      <h4 class="two">Add custom domain</h4>
+                    </div>
+
+                    <div class="hidden__text">
+                      <div>
+                        <p>
+                          Your current domain is 222219.myshopify.com but you
+                          can add a custom daomain to help customers find you
+                          online store. <span>Learn More.</span>
+                        </p>
+                        <button class="hidden__button">Add domain</button>
+                      </div>
+                      <img
+                        src="https://crushingit.tech/hackathon-assets/name-store.png"
+                        alt=""
+                        class="illustration"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container">
+                  <div class="wrapper">
+                    <div class="toggle__hidden">
+                      <button class="dashed">
+                        <img
+                          src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+                          alt=""
+                        />
+                      </button>
+                      <h4 class="two">Add custom domain</h4>
+                    </div>
+
+                    <div class="hidden__text">
+                      <div>
+                        <p>
+                          Your current domain is
+                          <span><a>222219.myshopify.com</a></span> but you can
+                          add a custom daomain to help customers find you online
+                          store. <span>Learn More.</span>
+                        </p>
+                        <button class="hidden__button">Add domain</button>
+                      </div>
+                      <img
+                        src="https://crushingit.tech/hackathon-assets/name-store.png"
+                        alt=""
+                        class="illustration"
+                      />
                     </div>
                   </div>
                 </div>

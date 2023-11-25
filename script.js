@@ -17,79 +17,102 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   let alert = document.getElementById("alert")
-  alert.addEventListener("click",()=> {
-  
-    if (document.getElementById('modal').style.display === 'none'){
+  alert.addEventListener("click", () => {
+
+    if (document.getElementById('modal').style.display === 'none') {
       document.getElementById('modal').style.display = 'block';
-      document.getElementById('modal').focus(); 
+      document.getElementById('modal').focus();
     }
-    else{
+    else {
       document.getElementById('modal').style.display = 'none';
-    
+
     }
 
   })
 
   let admin = document.getElementById("admin")
-  admin.addEventListener("click", ()=>{
-   if (document.getElementById('modal2').style.display ==='none'){
-    document.getElementById('modal2').style.display='block';
-    document.getElementById('modal2').focus();
+  admin.addEventListener("click", () => {
+    if (document.getElementById('modal2').style.display === 'none') {
+      document.getElementById('modal2').style.display = 'block';
+      document.getElementById('modal2').focus();
 
-   }
-   else{
-    document.getElementById('modal2').style.display = 'none'
-   }
+    }
+    else {
+      document.getElementById('modal2').style.display = 'none'
+    }
   })
 
- 
+
 
   //get element to be clicked upon
-  document.querySelectorAll('.two').forEach(function (title) {
+  document.querySelectorAll('.toggle__hidden').forEach(function (title) {
     title.addEventListener("click", function (e) {
       const hiddenText = title.nextElementSibling;
-      hiddenText.classList.toggle('top');
-      hiddenText.classList.toggle('hidden__text')
+
+      // Toggle classes
+      hiddenText.classList.toggle('tops');
+      hiddenText.classList.toggle('hidden__text');
+
+      // Check if the div contains the 'top' class
+      const hasTopClass = hiddenText.classList.contains('tops');
+
+      // Update background color based on the presence of 'top' class
+      title.closest('.wrapper').style.backgroundColor = hasTopClass ? '#F3F3F3' : '';
+
+      // Additional logic if needed when 'top' class is present
+      if (hasTopClass) {
+      
+      }
     });
   });
+
 
 
   //ALGORITHM FOR WHEN THE BUTTON IS CHECKED 
-  
-  let mySvgImages = document.querySelectorAll(".mysvg");
+  let mySvgImages = document.querySelectorAll(".dashed");
+  let rangeInput = document.querySelector("input[type='range']");
+  let progressText = document.getElementById("progressText");
 
-  mySvgImages.forEach(function (eachImage) {
+  mySvgImages.forEach(function (eachImage, index) {
     eachImage.addEventListener("click", function (e) {
-      eachImage.classList.add("rotate-animation");
+      // Check if the image is already checked
+      if (eachImage.src === "https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg") {
+        // Hide the current hidden text container
+        const currentHiddenText = eachImage.closest('.wrapper').querySelector('.hidden__text');
+        currentHiddenText.style.display = 'none';
 
-      setTimeout(function () {
-        var newImg1 = document.createElement("img");
-        newImg1.src = "https://crushingit.tech/hackathon-assets/icon-spinner.svg";
-        newImg1.classList.add("rotate-animation");
-        newImg1.style.width = "24px";  // Apply the same styling as the original SVG
-        newImg1.style.height = "24px";
-        newImg1.style.padding = "2px";
-        eachImage.parentNode.replaceChild(newImg1, eachImage);
+        // Reset the image to its original state
+        eachImage.src = "https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg";
+        eachImage.classList.remove("rotate-animation");
+      } else {
+        eachImage.classList.add("rotate-animation");
 
         setTimeout(function () {
-          var newImg2 = document.createElement("img");
-          newImg2.src = "https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg";
-          newImg2.style.width = "24px";  // Apply the same styling as the original SVG
-          newImg2.style.height = "24px";
-          newImg2.style.padding = "2px";
-          newImg1.parentNode.replaceChild(newImg2, newImg1);
-        }, 100);
+          var newImg1 = document.createElement("img");
+          newImg1.src = "https://crushingit.tech/hackathon-assets/icon-spinner.svg";
+          newImg1.classList.add("rotate-animation");
+          newImg1.classList.add("dashed");
+          eachImage.parentNode.replaceChild(newImg1, eachImage);
 
-      }, 100);
+          setTimeout(function () {
+            var newImg2 = document.createElement("img");
+            newImg2.src = "https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg";
+            newImg1.parentNode.replaceChild(newImg2, newImg1);
+
+            // Update the range value
+            rangeInput.value = index + 2;
+            progressText.textContent = `${index + 1}/${mySvgImages.length} completed`;
+
+
+            // Show the next hidden text container
+            const nextHiddenText = newImg2.closest('.wrapper').querySelector('.hidden__text');
+            nextHiddenText.style.display = 'block';
+          }, 100);
+
+        }, 100);
+      }
     });
   });
-
-
-
-
-
-
-
 
 
 
