@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>SHOPIFY DASHBOARD</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+          <div class="left__side">
+            <a href="https://www.shopify.com" aria-label="Go to Shopify">
+              <img
+                src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
+                alt="Shopify Logo"
+              />
+            </a>
+            <div class="input">
+              <img
+                src="https://crushingit.tech/hackathon-assets/icon-search.svg"
+                alt="Search Icon"
+              />
+              <input type="search" name="search" id="search" />
+            </div>
+          </div>
+          <div class="right__side">
+            <button id="alert" aria-label="Show notifications">
+              <img
+                src="https://crushingit.tech/hackathon-assets/icon-bell.svg"
+                alt="notification button"
+              />
+            </button>
+            <button class="admin" id="admin">
+              <p>DC</p>
+            </button>
+          </div>
+        </nav>
+
+        <div
+          id="modal"
+          role="dialog"
+          aria-labelledby="modalTitle"
+          aria-describedby="modalDescription"
+        >
+          <div class="modal-content">
+            <div class="header">
+              <div class="left-side">
+                <h2 id="modalTitle">Alert</h2>
+              </div>
+              <div class="right-side">
+                <img src="logo1.png" alt="Logo 1" class="logo" />
+                <img src="logo2.png" alt="Logo 2" class="logo" />
+              </div>
+            </div>
+            <p id="modalDescription">
+              Alerts about your store and account will show here
+            </p>
+          </div>
+        </div>
+
+        <div
+          id="modal2"
+          role="dialog"
+          aria-labelledby="modalTitle2"
+          aria-describedby="modalDescription2"
+        >
+          <div class="modal-content2">
+            <h2 id="modalTitle2">Second Modal with Buttons</h2>
+            <p id="modalDescription2">Choose an option:</p>
+            <div class="button-container2">
+              <button class="button2">Button A</button>
+              <button class="button2">Button B</button>
+              <button class="button2">Button C</button>
+              <button class="button2">Button D</button>
+              <button class="button2">Button E</button>
+              <button class="button2">Button F</button>
+              <button class="button2">Button G</button>
+              <button class="button2">Button H</button>
+              <button class="button2">Button I</button>
+              <button class="button2">Button J</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="parent">
+        <div>
+          <section class="more__info">
+            <div class="more__info__top">
+              <p>
+                Extend your trial for $1/month for 3 months on select plans.
+              </p>
+              <button class="closebutton" aria-label="Close">
+                <img
+                  src="https://crushingit.tech/hackathon-assets/icon-cross.svg"
+                  alt="close button"
+                />
+              </button>
+            </div>
+            <button class="CTA" aria-label="Select a plan">
+              <p>Select a plan</p>
+            </button>
+          </section>
+
+          <section class="special">
+            <div class="special__container">
+              <div class="more__info__top top">
+                <h3>setup guide</h3>
+                <p>
+                  Use this personalized guide to get your store up and running.
+                </p>
+              </div>
+              <div>
+                <button aria-label="Expand options">
+                  <img
+                    src="https://crushingit.tech/hackathon-assets/icon-arrow-down.svg"
+                    alt="arrowdown"
+                    id="arrowdown"
+                  />
+                </button>
+              </div>
+            </div>
+            <ul class="options" id="options">
+              <li>
+                <div class="container">
+                  <div class="wrapper">
+                    <div>
+                      <svg
+                        class="mysvg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                      >
+                        <circle
+                          cx="16"
+                          cy="16"
+                          r="12"
+                          stroke="#8A8A8A"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-dasharray="4 6"
+                        />
+                      </svg>
+                    </div>
+                    <div class="one">
+                      <h4 class="two">Customise your online store</h4>
+                      <div class="hidden__text">
+                        <p>
+                          Choose a theme and add your logo, colors, and images
+                          to reflect your brand. <span>Learn More.</span>
+                        </p>
+                        <button>Customise theme</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container">
+                  <div class="wrapper">
+                    <div>
+                      <svg
+                        class="mysvg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                      >
+                        <circle
+                          cx="16"
+                          cy="16"
+                          r="12"
+                          stroke="#8A8A8A"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-dasharray="4 6"
+                        />
+                      </svg>
+                    </div>
+                    <div class="one">
+                      <h4 class="two">Add your first product</h4>
+                      <div class="hidden__text">
+                        <p>
+                          Write a description, add photos, and set pricing for
+                          the products you plan to sell.
+                          <span>Learn More.</span>
+                        </p>
+                        <div class="button__containers">
+                          <button>Add product</button>
+                          <button>import product</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container">
+                  <div class="wrapper">
+                    <div>
+                      <svg
+                        class="mysvg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                      >
+                        <circle
+                          class="mysvg"
+                          cx="16"
+                          cy="16"
+                          r="12"
+                          stroke="#8A8A8A"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-dasharray="4 6"
+                        />
+                      </svg>
+                    </div>
+                    <div class="one">
+                      <h4 class="two">Add custom domain</h4>
+                      <div class="hidden__text">
+                        <p>
+                          Your current domain is 222219.myshopify.com but you
+                          can add a custom daomain to help customers find you
+                          online store. <span>Learn More.</span>
+                        </p>
+                        <button>Add domain</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container">
+                  <div class="wrapper">
+                    <div>
+                      <svg
+                        class="mysvg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                      >
+                        <circle
+                          cx="16"
+                          cy="16"
+                          r="12"
+                          stroke="#8A8A8A"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-dasharray="4 6"
+                        />
+                      </svg>
+                    </div>
+                    <div class="one">
+                      <h4 class="two">Name your store</h4>
+                      <div class="hidden__text">
+                        <p>
+                          Your temporary store name is currently Davii
+                          collections. The store name appears in your admin and
+                          your online store<span>Learn More.</span>
+                        </p>
+                        <button>Name store</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container">
+                  <div class="wrapper">
+                    <div>
+                      <svg
+                        class="mysvg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                      >
+                        <circle
+                          cx="16"
+                          cy="16"
+                          r="12"
+                          stroke="#8A8A8A"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-dasharray="4 6"
+                        />
+                      </svg>
+                    </div>
+                    <div class="one">
+                      <h4 class="two">Set up a payment provider</h4>
+                      <div class="hidden__text">
+                        <p>
+                          Choose a payment provider to start accepting payments.
+                          You'll need to create an account with the payment
+                          provider and set it up with your shopify store.
+                          <span>Learn More.</span>
+                        </p>
+                        <button>Set up payment</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
