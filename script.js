@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Additional logic if needed when 'top' class is present
       if (hasTopClass) {
-      
+
       }
     });
   });
@@ -114,10 +114,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-
-
-
-
+  let moreInfo = document.getElementById("more__info")
+  let plan = document.getElementById("closebutton")
+  plan.addEventListener("click", () => {
+    if (moreInfo.style.display === "block") {
+      moreInfo.style.display = "none"
+    }
+    else {
+      moreInfo.style.display = "block"
+    }
+  })
 
 
 });

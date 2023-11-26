@@ -27,7 +27,7 @@
                 src="https://crushingit.tech/hackathon-assets/icon-search.svg"
                 alt="Search Icon"
               />
-              <input type="search" name="search" id="search" />
+              <input type="search" name="search" id="search" placeholder="search"/>
             </div>
           </div>
           <div class="right__side">
@@ -55,8 +55,8 @@
                 <h2 id="modalTitle">Alert</h2>
               </div>
               <div class="right-side">
-                <img src="logo1.png" alt="Logo 1" class="logo" />
-                <img src="logo2.png" alt="Logo 2" class="logo" />
+                <img src="https://crushingit.tech/hackathon-assets/icon-filter.svg" alt="Logo 1" class="logo" />
+                <img src="https://crushingit.tech/hackathon-assets/icon-check-empty-circle.svg" alt="Logo 2" class="logo" />
               </div>
             </div>
             <p id="modalDescription">
@@ -74,24 +74,36 @@
           <div class="modal-content2">
             <div class="button-container2">
               <div class="modal-container2__header">
-                <div>
+                <div class="section1">       <div class="admin__carrier">
+                  <div>
                   <button class="admin" id="admin">
                     <p>DC</p>
                   </button>
                   <h4>Davii collections</h4>
+                  </div>
                   <input type="checkbox" />
                 </div>
               </div>
-              <button class="button2">Button B</button>
-              <div>
+              <button class="button2">
+                <div>
+                    All stores
+                </div>
+                </button>
+              </div>
+              <div class="section2">
                 <button class="button2">Help Centre</button>
                 <button class="button2">ChangeLog</button>
                 <button class="button2">Community forums</button>
                 <button class="button2">Hire a shopify partner</button>
                 <button class="button2">Keyboard shortcuts</button>
               </div>
-              <div>
-                <button class="button2">David Michael</button>
+              <div >
+                <button class="button2">
+                  <div class="mail">
+                    <p>David Micheal</p>
+                    <small>davidmicheal@gmail.com</small>
+                  </div>
+                </button>
                 <button class="button2">Manage account</button>
                 <button class="button2">Log out</button>
               </div>
@@ -101,20 +113,22 @@
       </header>
       <div class="parent">
         <div>
-          <section class="more__info">
+          <section class="more__info" id="more__info">
             <div class="more__info__top">
               <p>
                 Extend your trial for $1/month for 3 months on select plans.
               </p>
               <button class="closebutton" aria-label="Close">
                 <img
+                  id="closebutton"
                   src="https://crushingit.tech/hackathon-assets/icon-cross.svg"
                   alt="close button"
                 />
               </button>
             </div>
-            <button class="CTA" aria-label="Select a plan">
+            <a href = "https://www.shopify.com/pricing"><button class="CTA" id="CTA" aria-label="Select a plan">
               <p>Select a plan</p>
+              </a>
             </button>
           </section>
 
@@ -133,10 +147,10 @@
 
                   <p id = "progressText">0/5 completed</p>
                   <input type="range" max="6" step="1" value="0" disabled />
-                </div>
-              </div>
+                </div>  
+              </div>  
 
-              <div>
+                <div>
                 <button aria-label="Expand options">
                   <img
                     src="https://crushingit.tech/hackathon-assets/icon-arrow-down.svg"
@@ -170,7 +184,7 @@
                         <button class="hidden__button">Add domain</button>
                       </div>
                       <img
-                        src="https://crushingit.tech/hackathon-assets/name-store.png"
+                        src="https://crushingit.tech/hackathon-assets/payment.png"
                         alt=""
                         class="illustration"
                       />
@@ -201,7 +215,7 @@
                         <button class="hidden__button">Add domain</button>
                       </div>
                       <img
-                        src="https://crushingit.tech/hackathon-assets/name-store.png"
+                        src="https://crushingit.tech/hackathon-assets/product.png"
                         alt=""
                         class="illustration"
                       />
@@ -232,7 +246,7 @@
                         <button class="hidden__button">Add domain</button>
                       </div>
                       <img
-                        src="https://crushingit.tech/hackathon-assets/name-store.png"
+                        src="https://crushingit.tech/hackathon-assets/website.png"
                         alt=""
                         class="illustration"
                       />
@@ -263,7 +277,7 @@
                         <button class="hidden__button">Add domain</button>
                       </div>
                       <img
-                        src="https://crushingit.tech/hackathon-assets/name-store.png"
+                        src="https://crushingit.tech/hackathon-assets/customise-store.png"
                         alt=""
                         class="illustration"
                       />
